@@ -1,0 +1,31 @@
+body {
+    background-color: #222;
+    font-family:'Merriweather', serif;
+    font-weight: 300;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+    padding: 2%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+section#profile {
+    grid-column: 1 / 2;
+    padding: 0 1.6rem;
+}
+
+section#aside {
+    grid-column: 2 / 3;
+}
+
+img {
+    width: 100%;
+}
