@@ -16,6 +16,9 @@ header {
     justify-content: space-between;
     flex-direction: row;
     border-bottom: solid 1px var(--theme-colour);
+    padding: 1rem;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
 }
 
 header .title {
@@ -31,6 +34,10 @@ header a.active {
     text-decoration: underline 2px solid var(--theme-colour);
 }
 
+h1 {
+    font-size: 3rem;
+}
+
 h2 {
     font-weight: 700;
 }
@@ -38,7 +45,8 @@ h2 {
 #headshot {
     max-width: 300px;
     width: 50%;
-    float: right
+    float: right;
+    margin: 0 0 3vw 3vw;
 }
 
 figure img {
@@ -47,6 +55,10 @@ figure img {
 
 a {
     color: black;
+}
+
+main {
+    padding: 0 2vw;
 }
 
 main a:link {
