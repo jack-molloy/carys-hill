@@ -8,6 +8,7 @@ body {
     width: 100vw;
     max-width: 800px;
     margin: auto;
+    line-height: 150%;
 }
 
 header {
@@ -15,9 +16,10 @@ header {
     align-items: baseline;
     justify-content: space-between;
     flex-direction: row;
+    flex-wrap: wrap;
     border-bottom: solid 1px var(--theme-colour);
     padding: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5vh;
     font-size: 1.2rem;
 }
 
@@ -30,12 +32,7 @@ header .icon {
     color: black;
 }
 
-header a {
-    margin-inline-start: 1.5em;
-    text-decoration: none;
-}
-
-header a.active {
+.navlink.active {
     text-decoration: underline 2px solid var(--theme-colour);
 }
 
@@ -51,22 +48,22 @@ h2 {
     max-width: 300px;
     width: 50%;
     float: right;
-    margin: 0 0 3vw 3vw;
+    margin: 0 0 1vh 2vw;
 }
 
 figure img {
     width: 100%;
 }
 
-a {
-    color: black;
-}
-
 main {
     padding: 0 2vw;
 }
 
-main a:link {
+a {
+    color: black;
+}
+
+a:visited, a:link {
     text-decoration: underline 2px dotted var(--theme-colour);
 }
 
