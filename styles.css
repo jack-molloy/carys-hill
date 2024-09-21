@@ -25,6 +25,11 @@ header .title {
     display: inline;
 }
 
+header .icon {
+    height: 1.2rem;
+    color: black;
+}
+
 header a {
     margin-inline-start: 1.5em;
     text-decoration: none;
@@ -63,4 +68,9 @@ main {
 
 main a:link {
     text-decoration: underline 2px dotted var(--theme-colour);
+}
+
+a:focus, a:hover {
+    background-color: var(--theme-colour);
+    filter: brightness(200%);
 }
