@@ -27,9 +27,16 @@ header .title {
     display: inline;
 }
 
-.icon {
+#email-icon {
     height: 1.2rem;
-    color: black;
+    position: relative;
+    top: 3px;
+}
+
+#twitter-icon {
+    height: 1rem;
+    position: relative;
+    top: 2px;
 }
 
 .navlink.active {
@@ -86,4 +93,6 @@ footer {
     border-top: 1px solid var(--theme-colour);
     padding: 1rem 2vw;
     margin-top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
 }
