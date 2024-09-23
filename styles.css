@@ -13,7 +13,7 @@ body {
 
 header {
     display: flex;
-    align-items: baseline;
+    align-items: start;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
@@ -21,6 +21,9 @@ header {
     padding: 1rem;
     margin-bottom: 5vh;
     font-size: 1.2rem;
+    row-gap: 1.4rem;
+    column-gap: 4rem;
+    margin-block: 1rem 5vh;
 }
 
 header .title {
@@ -79,13 +82,15 @@ a:focus, a:hover {
     filter: brightness(200%);
 }
 
-@media screen and (max-width:990px) {
-  header * {
+@media screen and (max-width:450px) {
+  header > * {
     flex-basis: 100%;
   }
 
   header nav a {
     display: block;
+    margin-block: 2vh;
+    font-size: 6vw;
   }
 }
 
@@ -94,5 +99,14 @@ footer {
     padding: 1rem 2vw;
     margin-top: 5vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    gap: 10vw;
+
+}
+
+#links {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+    font-size: 2rem;
 }
