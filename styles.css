@@ -1,14 +1,24 @@
 :root {
+    /* Set a theme for the page! */
     --theme-colour: #d63;
 }
 
 body {
-    font-family:'Merriweather', serif;
+    /* Font for the whole page  */
+    font-family: 'Merriweather', serif;
     font-weight: 300;
-    width: 100vw;
-    max-width: 800px;
-    margin: auto;
+
+    /* Space out the lines of text  */
     line-height: 150%;
+
+    /* Change where the main content is positioned: */
+    width: 94vw;
+    /* Take up most of the screen width on smaller screens... */
+    max-width: 800px;
+    /* ...but cap it so it's not too wide on bigger ones. */
+
+    /* Centre the content on the page */
+    margin: auto;
 }
 
 header {
@@ -17,8 +27,8 @@ header {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: solid 1px var(--theme-colour);
-    padding: 1rem;
+    border-bottom: solid 3px var(--theme-colour);
+    padding: calc(1rem + 8px);
     margin-bottom: 5vh;
     font-size: 1.2rem;
     row-gap: 1.4rem;
@@ -43,7 +53,7 @@ header .title {
 }
 
 .navlink.active {
-    text-decoration: underline 2px solid var(--theme-colour);
+    text-decoration: underline 3px solid var(--theme-colour);
 }
 
 h1 {
@@ -71,31 +81,22 @@ main {
 
 a {
     color: black;
+    text-underline-offset: 6px;
 }
 
-a:visited, a:link {
+a:visited,
+a:link {
     text-decoration: underline 2px dotted var(--theme-colour);
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
     background-color: var(--theme-colour);
     filter: brightness(200%);
 }
 
-@media screen and (max-width:450px) {
-  header > * {
-    flex-basis: 100%;
-  }
-
-  header nav a {
-    display: block;
-    margin-block: 2vh;
-    font-size: 6vw;
-  }
-}
-
 footer {
-    border-top: 1px solid var(--theme-colour);
+    border-top: 3px solid var(--theme-colour);
     padding: 1rem 2vw;
     margin-top: 5vh;
     display: flex;
@@ -105,8 +106,20 @@ footer {
 }
 
 #links {
-	flex-grow: 1;
-	display: flex;
-	justify-content: space-between;
-    font-size: 2rem;
+    flex-grow: 1;
+    display: flex;
+    font-size: 1.6rem;
+    gap: 30px;
+}
+
+#zine-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+}
+
+#zines figure {
+    max-width: min(600px, 90vw);
+    margin: 0;
 }
