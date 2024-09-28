@@ -139,16 +139,3 @@ footer {
   justify-content: flex-start;
   gap: 10vw;
 }
-
-/* Manually set the height of the social icons. Fiddly! */
-#email-icon {
-  height: 1.2rem;
-  position: relative;
-  top: 3px;
-}
-
-#twitter-icon {
-  height: 1rem;
-  position: relative;
-  top: 2px;
-}
