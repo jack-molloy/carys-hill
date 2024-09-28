@@ -1,125 +1,154 @@
 :root {
-    /* Set a theme for the page! */
-    --theme-colour: #d63;
+  /* Set a theme for the page! */
+  --theme-colour: #d63;
 }
 
 body {
-    /* Font for the whole page  */
-    font-family: 'Merriweather', serif;
-    font-weight: 300;
+  /* Font for the whole page  */
+  font-family: "Merriweather", serif;
+  font-weight: 300;
 
-    /* Space out the lines of text  */
-    line-height: 150%;
+  /* Space out the lines of text  */
+  line-height: 150%;
 
-    /* Change where the main content is positioned: */
-    width: 94vw;
-    /* Take up most of the screen width on smaller screens... */
-    max-width: 800px;
-    /* ...but cap it so it's not too wide on bigger ones. */
+  /* Change where the main content is positioned: */
+  /* Take up most of the screen width on smaller screens... */
+  width: 94vw;
+  /* ...but cap it so it's not too wide on bigger ones. */
+  max-width: 800px;
 
-    /* Centre the content on the page */
-    margin: auto;
+  /* Centre the content on the page */
+  margin: auto;
 }
 
 header {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-bottom: solid 3px var(--theme-colour);
-    padding: calc(1rem + 8px);
-    margin-bottom: 5vh;
-    font-size: 1.2rem;
-    row-gap: 1.4rem;
-    column-gap: 4rem;
-    margin-block: 1rem 5vh;
-}
+  /* Make the links wrap underneath the title on small screens */
+  display: flex;
+  flex-wrap: wrap;
 
-header .title {
-    display: inline;
-}
+  /* Thick underline in the theme colour */
+  border-bottom: solid 3px var(--theme-colour);
 
-#email-icon {
-    height: 1.2rem;
-    position: relative;
-    top: 3px;
-}
+  /* Space everything out nicely */
+  row-gap: 1.4rem;
+  column-gap: 4rem;
+  margin-block: 1rem 5vh;
 
-#twitter-icon {
-    height: 1rem;
-    position: relative;
-    top: 2px;
-}
-
-.navlink.active {
-    text-decoration: underline 3px solid var(--theme-colour);
-}
-
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-weight: 700;
-}
-
-#headshot {
-    max-width: 300px;
-    width: 50%;
-    float: right;
-    margin: 0 0 1vh 2vw;
-}
-
-figure img {
-    width: 100%;
+  /* make the links look even after considering the underlines */
+  padding: calc(1rem + 8px) 2vw;
 }
 
 main {
-    padding: 0 2vw;
+  /* Add some padding to the main body of the page */
+  padding: 0 2vw;
+}
+
+.title {
+  /* Make the title large and in line with the rest of the header */
+  display: inline;
+  font-size: 3rem;
+}
+
+#links {
+  /* Wrap the navigation links if there are too many or the screen is small */
+  display: flex;
+  flex-wrap: wrap;
+
+  /* Make the links larger than normal text */
+  font-size: 1.45rem;
+
+  /* Make the links spread out over the available space */
+  flex-grow: 1;
+  justify-content: space-between;
+
+  /* Spread out rows of links so they don't overlap */
+  row-gap: 2vh;
 }
 
 a {
-    color: black;
-    text-underline-offset: 6px;
-}
+  /* Remove the standard blue for links */
+  color: black;
 
-a:visited,
-a:link {
-    text-decoration: underline 2px dotted var(--theme-colour);
+  /* Dotted orange underline for all links on the page */
+  text-decoration: underline 2px dotted var(--theme-colour);
+  text-underline-offset: 6px;
 }
 
 a:focus,
 a:hover {
-    background-color: var(--theme-colour);
-    filter: brightness(200%);
+  /* Light orange background on links when mousing over or tabbing through */
+  background-color: var(--theme-colour);
+  filter: brightness(200%);
 }
 
-footer {
-    border-top: 3px solid var(--theme-colour);
-    padding: 1rem 2vw;
-    margin-top: 5vh;
-    display: flex;
-    justify-content: flex-start;
-    gap: 10vw;
-
+.navlink.active {
+  /* Underline the link (with a solid line) for the current page in the navbar */
+  text-decoration: underline 3px solid var(--theme-colour);
 }
 
-#links {
-    flex-grow: 1;
-    display: flex;
-    font-size: 1.6rem;
-    gap: 30px;
+h2 {
+  /* Make subheadings bold */
+  font-weight: 700;
+}
+
+figure img {
+  /* Shrink images to the size of the container they're in */
+  width: 100%;
+}
+
+#headshot {
+  /* Make the headshot take up up to half of the page, but cap so it isn't ever massive */
+  max-width: 300px;
+  width: 50%;
+
+  /* Make it sit on the right instead of below*/
+  float: right;
+
+  /* Space it out from the text a bit */
+  margin: 0 0 1vh 2vw;
 }
 
 #zine-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px
+  /* Set the zines to display one on top of the other... */
+  display: flex;
+  flex-direction: column;
+
+  /* ...centred... */
+  align-items: center;
+
+  /* ...with a gap between them. */
+  gap: 10px;
 }
 
 #zines figure {
-    max-width: min(600px, 90vw);
-    margin: 0;
+  /* Cap the size of the zines at 90% of the page or 600px, whichever is smaller. */
+  max-width: min(600px, 90vw);
+  margin: 0;
+}
+
+footer {
+  /* Add a border at the top to match the header */
+  border-top: solid 3px var(--theme-colour);
+
+  /* Add space around to match the header's padding (mostly) */
+  padding: 1rem 2vw;
+  margin-top: 5vh;
+
+  /* Space out the contents (contact box) */
+  display: flex;
+  justify-content: flex-start;
+  gap: 10vw;
+}
+
+/* Manually set the height of the social icons. Fiddly! */
+#email-icon {
+  height: 1.2rem;
+  position: relative;
+  top: 3px;
+}
+
+#twitter-icon {
+  height: 1rem;
+  position: relative;
+  top: 2px;
 }
